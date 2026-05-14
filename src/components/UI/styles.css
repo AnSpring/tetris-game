@@ -1,0 +1,47 @@
+/* Statistics displays */
+.stat-display {
+  margin: 15px 0;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #ff00ff;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px #ff00ff;
+}
+
+.stat-value {
+  font-size: 16px;
+  color: #00ffff;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Preview boxes */
+.preview-box {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff00ff;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.preview-label {
+  font-size: 10px;
+  color: #ff00ff;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #ff00ff;
+}

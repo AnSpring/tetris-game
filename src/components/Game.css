@@ -1,0 +1,124 @@
+.game-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar.left {
+  align-items: flex-end;
+}
+
+.sidebar.right {
+  align-items: flex-start;
+}
+
+.game-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Combo Display */
+.combo-display {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 0, 255, 0.2);
+  border: 2px solid #f0f;
+  padding: 10px 15px;
+  text-align: center;
+  animation: pulse 0.5s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  z-index: 10;
+}
+
+.combo-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: #f0f;
+  text-shadow: 0 0 5px #f0f;
+  margin-bottom: 5px;
+}
+
+.combo-value {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .game-wrapper {
+    padding: 10px;
+    padding-bottom: 220px; /* Space for touch controls */
+  }
+
+  .game-layout {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 300px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sidebar.left,
+  .sidebar.right {
+    align-items: center;
+  }
+
+  .game-center canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-wrapper {
+    padding: 5px;
+    padding-bottom: 220px;
+  }
+
+  .sidebar {
+    font-size: 10px;
+  }
+
+  .stat-value {
+    font-size: 12px !important;
+  }
+}
