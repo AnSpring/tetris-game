@@ -37,7 +37,7 @@ export default function Statistics({ onBack }) {
     <div className="statistics">
       <div className="statistics-header">
         <button className="back-button" onClick={onBack}>
-          ← Back
+          <span style={{ fontSize: '16px' }}>←</span> Back
         </button>
         <h1 className="statistics-title">Extended Statistics</h1>
         <button
